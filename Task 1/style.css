@@ -73,6 +73,10 @@ form {
 
 /* rezultato isvedimo bloko stilizavimas  */
 
+.hide {
+    display: none;
+}
+
 #output {
     position: relative;
     text-align: center;
@@ -91,4 +95,11 @@ form {
     color: burlywood;
     font-size: 20px;
     font-weight: 800;
+}
+
+#alert {
+    margin-top: 20px;
+    /* background-color: red; */
+    color: red;
+    /* padding: 20px 0; */
 }
