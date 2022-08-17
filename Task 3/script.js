@@ -48,7 +48,7 @@ function createHtml(arr) {
     arr.forEach((el) => {
         const itemEl = document.createElement('div');
         itemEl.className = 'item';
-        itemEl.innerHTML += `<p>${el.login}</p><p"><img class="img" src="${el.avatar_url}"></img></p>`;
+        itemEl.innerHTML += `<p><span>User:</span> ${el.login}</p><img class="img" src="${el.avatar_url}"></img>`;
         console.log(itemEl);
         outputEl.append(itemEl);
     });

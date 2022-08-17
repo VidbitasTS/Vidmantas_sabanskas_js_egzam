@@ -1,61 +1,103 @@
 /* Resets */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 /* Mobile first */
+
 .wrapper {
-  min-height: 100vh;
-  min-width: calc(100vw - (100vw - 100%));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #222;
+    min-height: 100vh;
+    min-width: calc(100vw - (100vw - 100%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
 }
 
 .btn-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn-container #btn {
-  margin: 50px 0;
-  padding: 15px 25px;
-  background-color: #474747;
-  border: #222;
-  color: #fff;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
+    margin: 50px 0;
+    padding: 15px 25px;
+    background-color: #474747;
+    border: #222;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
 }
 
 .btn-container #btn:hover {
-  cursor: pointer;
-  opacity: 0.9;
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .output-cointainer {
-  width: 100%;
-  margin: 25px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .output-cointainer h1 {
-  color: #fff;
+    color: #fff;
 }
 
 .output-cointainer #output {
-  width: 80%;
-  margin-top: 25px;
-  padding: 30px;
-  border-radius: 5px;
-  background-color: #fff;
+    width: 80%;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+/* Uzduoties styles */
+
+#output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 1rem;
+    /* width: 100%; */
+}
+
+.item {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-basis: 100%; */
+    flex: 3;
+    /* flex-basis: 30%; */
+}
+
+.item p {
+    background-color: rgb(194, 192, 192);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    /* padding: 10px; */
+}
+
+.item span {
+    color: blue;
+}
+
+.img {
+    /* max-width: 100%; */
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
 }
