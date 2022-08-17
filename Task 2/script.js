@@ -14,3 +14,12 @@ let state = 1;
 btnEl.addEventListener('click', () => {
     stateEl.textContent = state++;
 });
+
+//  Kitas variantas veikiantis
+
+// document
+//     .querySelector('#btn__element')
+//     .addEventListener(
+//         'click',
+//         () => (document.querySelector('#btn__state').textContent = state++)
+//     );

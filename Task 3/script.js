@@ -12,3 +12,44 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'https://api.github.com/users';
+
+// Taikomes
+
+const btnEl = document.querySelector('#btn');
+const outputEl = document.querySelector('#output');
+
+// addEvenListener
+
+btnEl.addEventListener('click', async() => {
+    document.querySelector('#message').style.display = 'none';
+    const elArr = await getElementEndpoint(ENDPOINT);
+    createHtml(elArr);
+});
+
+// Funkcijos
+
+async function getElementEndpoint(url) {
+    try {
+        const resp = await fetch(url);
+        if (!resp.ok) {
+            throw new Error(
+                `fetch fail klaidos: ${resp.status} ${resp.statusText} trying to fetch ${resp.url}`
+            );
+        }
+        const dataBack = await resp.json();
+        return dataBack;
+    } catch (error) {
+        console.warn('klaida send comment ', error.message);
+        console.warn('error.stack ', error.stack);
+    }
+}
+
+function createHtml(arr) {
+    arr.forEach((el) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'item';
+        itemEl.innerHTML += `<p>${el.login}</p><p"><img class="img" src="${el.avatar_url}"></img></p>`;
+        console.log(itemEl);
+        outputEl.append(itemEl);
+    });
+}
