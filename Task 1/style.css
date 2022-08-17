@@ -97,6 +97,12 @@ form {
     font-weight: 800;
 }
 
+#output p {
+    color: green;
+    font-size: 20px;
+    font-weight: 800;
+}
+
 #alert {
     margin-top: 20px;
     /* background-color: red; */

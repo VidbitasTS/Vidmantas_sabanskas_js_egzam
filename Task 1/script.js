@@ -35,7 +35,7 @@ formEl.addEventListener('submit', (e) => {
 // Funkcijos
 
 function createOutputHtml(lb, gr, oz) {
-    outEl.innerHTML = `<p><span>Svarai:</span> ${lb}</p><p><span>Gramai:</span> ${gr}</p><span>Uncijos:</span> ${oz}</p>`;
+    outEl.innerHTML = `<p><span>Svarai:</span> ${lb}</p><p><span>Gramai:</span> ${gr}</p><p><span>Uncijos:</span> ${oz}</p>`;
 }
 
 function alertText(element) {
