@@ -21,15 +21,11 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     outEl.style.display = 'none';
     const val = kgEl.value;
-    //if(!isNaN(parseFloat(x)) && isFinite(x))
-    console.log(parseFloat(val));
     if (isNaN(parseFloat(val)) || parseFloat(val) <= 0) {
         alertText(alertEl);
         return;
     }
-    // if (parseFloat(val) <= 0) alert('okk');
     outEl.style.display = 'inline-block';
-
     const lb = val * 2.2046;
     const gr = val / 0.001;
     const oz = val * 35.274;
