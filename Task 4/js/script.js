@@ -10,3 +10,6 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+//  Funkcijos
