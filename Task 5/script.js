@@ -29,54 +29,30 @@ console.log('Turi suni === ', rez1);
 function filterDogOwers1(arr) {
     let newArr = [];
     arr.forEach((el) => {
-        if (el.hasDog === true) newArr.push({ name: el.name, hasDog: el.hasDog });
+        if (el.hasDog === true) newArr.push(el);
+        //       if (el.hasDog === true) newArr.push({ name: el.name, hasDog: el.hasDog });
     });
     return newArr;
 }
 const rez11 = filterDogOwers1(users);
 console.log('Turi suni 2 === ', rez11);
 
-function filterDogOwers2(arr) {
-    let newArr = [];
-    arr.filter(function(el) {
-        if (el.hasDog === true) {
-            newArr.push({ name: el.name, hasDog: el.hasDog });
-        }
-    });
-    return newArr;
-}
-
-const rez111 = filterDogOwers2(users);
-console.log('Turi suni 3 === ', rez111);
-
 // ======================
 
 function filterAdults(arr) {
     return arr.filter((el) => el.age >= 18);
+    //return users.filter((el) => el.age >= 18).map((obj) => obj.name);
 }
-
 const rez2 = filterAdults(users);
 console.log('Pilnametis === ', rez2);
 
 function filterAdults1(arr) {
     let newArr = [];
     arr.forEach((el) => {
-        if (el.age >= 18) newArr.push({ name: el.name, age: el.age });
+        if (el.age >= 18) newArr.push(el);
+        //        if (el.age >= 18) newArr.push({ users: el.name });
     });
     return newArr;
 }
 const rez22 = filterAdults1(users);
 console.log('Pilnametis 2 === ', rez22);
-
-function filterAdults2(arr) {
-    let newArr = [];
-    arr.filter(function(el) {
-        if (el.age >= 18) {
-            newArr.push({ name: el.name, hasDog: el.age });
-        }
-    });
-    return newArr;
-}
-
-const rez222 = filterDogOwers2(users);
-console.log('Pinametis 3 === ', rez222);
