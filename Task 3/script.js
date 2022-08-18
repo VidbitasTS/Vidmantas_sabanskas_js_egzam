@@ -45,10 +45,12 @@ async function getElementEndpoint(url) {
 }
 
 function createHtml(arr) {
-    arr.forEach((el) => {
+    arr.forEach((el, i) => {
         const itemEl = document.createElement('div');
-        itemEl.className = 'item';
-        itemEl.innerHTML += `<p><span>User:</span> ${el.login}</p><img class="img" src="${el.avatar_url}"></img>`;
+        itemEl.className = 'item card';
+        itemEl.innerHTML += `<p> ${i + 1}. <span>User:</span> ${
+      el.login
+    }</p><img class="img" src="${el.avatar_url}"></img>`;
         console.log(itemEl);
         outputEl.append(itemEl);
     });

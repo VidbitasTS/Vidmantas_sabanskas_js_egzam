@@ -65,7 +65,17 @@
 
 /* Uzduoties styles */
 
+.card {
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgb(180, 190, 194);
+    border: 1px solid rgb(191, 180, 180);
+    border-radius: 5px;
+    background-color: snow;
+}
+
 #output {
+    /* min-height: 100vh; */
+    /* min-width: calc(100vw - (100vw - 50%)); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -75,11 +85,17 @@
 }
 
 .item {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-basis: 100%; */
-    flex: 3;
+    /* min-height: 100vh; */
+    /* min-width: calc(100vw - (100vw - 50%)); */
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    flex: 1;
     /* flex-basis: 30%; */
+    /* flex-grow: calc(); */
+    /* flex-shrink: 3; */
+    align-content: space-around;
+    align-items: stretch;
 }
 
 .item p {
@@ -87,17 +103,34 @@
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 15px;
-    /* padding: 10px; */
+    color: red;
 }
 
 .item span {
     color: blue;
+    /* background-color: green; */
+    padding: 20px 5px;
+    /* opacity: 0.5; */
 }
 
 .img {
     /* max-width: 100%; */
-    width: 200px;
+    width: auto;
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+@media only screen and (max-width: 929px) {
+    .tem {
+        flex: 1 160px;
+        /* flex-shrink: 2; */
+    }
+    .item p {
+        color: yellow;
+        width: 200px;
+    }
+    .img {
+        width: 200px;
+    }
 }
