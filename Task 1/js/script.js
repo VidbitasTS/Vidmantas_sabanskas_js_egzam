@@ -9,6 +9,9 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 // Taikomes
 const formEl = document.forms[0];
 const outEl = document.querySelector('#output');

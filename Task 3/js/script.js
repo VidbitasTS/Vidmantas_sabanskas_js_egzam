@@ -11,6 +11,9 @@ Pastaba: Sukurta kortelė, kurioje yra pateikiama vartotojo informacija, turi
 turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 const ENDPOINT = 'https://api.github.com/users';
 
 // Taikomes

@@ -4,6 +4,9 @@ su tekstu "CLICK ME". Paspaudimų rezultatas turi būti matomas dešinėje
 pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 ------------------------------------------------------------------- */
 
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 // Nusitaikom
 
 const stateEl = document.querySelector('#btn__state');
@@ -15,7 +18,7 @@ btnEl.addEventListener('click', () => {
     stateEl.textContent = state++;
 });
 
-//  Kitas variantas veikiantis
+//  Kitas variantas viena eilute
 
 // document
 //     .querySelector('#btn__element')
