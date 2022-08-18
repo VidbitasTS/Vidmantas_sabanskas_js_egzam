@@ -20,15 +20,35 @@ const users = [
     { id: '9', name: 'Daniel Cane', age: 51 },
 ];
 
+//users.reduce();
+
+let avrAge = users.reduce(function(acc, curVal) {
+    return acc + curVal.age / users.length;
+}, 0);
+console.log('avrAge ===', avrAge.toFixed(2));
+
 function getUserAverageAge(arr) {
     let avr = 0;
     for (const key in arr) {
-        console.log(arr[key].age);
         avr += arr[key].age / arr.length;
     }
-    return avr;
-    //   return arr.reduce((a, b) => Number(a.age) + Number(b.age), 0);
+    return avr.toFixed(2);
+}
+const average = getUserAverageAge(users);
+console.log('average age === ', average);
+
+// ====================
+
+const arrNames = users.map((obj) => obj.name);
+console.log('arrNames === ', arrNames);
+
+function getUsersNames(arr) {
+    let newArr = [];
+    for (const key in arr) {
+        newArr.push(arr[key].name);
+    }
+    return newArr;
 }
 
-const average = getUserAverageAge(users);
-console.log('average === ', average);
+const newArrNames = getUsersNames(users);
+console.log('newArrNames === ', newArrNames);
