@@ -20,15 +20,19 @@ const alertEl = document.querySelector('#alert');
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
     outEl.style.display = 'none';
-    if (!kgEl.value) {
+    const val = kgEl.value;
+    //if(!isNaN(parseFloat(x)) && isFinite(x))
+    console.log(parseFloat(val));
+    if (isNaN(parseFloat(val)) || parseFloat(val) <= 0) {
         alertText(alertEl);
         return;
     }
+    // if (parseFloat(val) <= 0) alert('okk');
     outEl.style.display = 'inline-block';
 
-    const lb = kgEl.value * 2.2046;
-    const gr = kgEl.value / 0.001;
-    const oz = kgEl.value * 35.274;
+    const lb = val * 2.2046;
+    const gr = val / 0.001;
+    const oz = val * 35.274;
     createOutputHtml(lb, gr, oz);
 });
 
@@ -39,8 +43,9 @@ function createOutputHtml(lb, gr, oz) {
 }
 
 function alertText(element) {
-    element.textContent = 'Neivedėt duomenų !!!';
+    element.textContent =
+        'Neivedėt duomenų arba neteisingo formato, arba ne skačius, arba <= 0 !!!';
     setTimeout(() => {
         element.textContent = '';
-    }, 2000);
+    }, 3000);
 }
