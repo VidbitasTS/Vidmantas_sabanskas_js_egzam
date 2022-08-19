@@ -88,9 +88,6 @@ form {
     padding: 20px 0;
 }
 
-
-/*  */
-
 #output span {
     color: burlywood;
     font-size: 20px;
@@ -105,9 +102,7 @@ form {
 
 #alert {
     margin-top: 20px;
-    /* background-color: red; */
     color: red;
-    /* padding: 20px 0; */
 }
 
 .card {
@@ -129,7 +124,6 @@ a {
 .main-nav__link {
     display: inline-block;
     padding: 0.8em 1.6em;
-    /* text-transform: uppercase; */
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.6px;
@@ -177,10 +171,8 @@ a {
 
 footer {
     text-align: center;
-    /* margin-top: 50px; */
     background-color: rgb(202, 199, 199);
     padding: 30px 0;
-    /* margin-bottom: 100px; */
 }
 
 footer a {

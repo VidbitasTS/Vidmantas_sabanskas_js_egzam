@@ -12,13 +12,16 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 import initHeader from './modules/header.js';
 import initFooter from './modules/footer.js';
 
+//import initFooter1 from '../../Task 1/style.css';
+
 // Taikomes
 const formEl = document.forms[0];
 const outEl = document.querySelector('#output');
 const kgEl = document.querySelector('#search');
 const alertEl = document.querySelector('#alert');
+const scriptEl = document.querySelector('#script');
 const styleEl = document.querySelector('#style');
-console.log(styleEl);
+
 // addEventListner
 
 formEl.addEventListener('submit', (e) => {
@@ -36,8 +39,20 @@ formEl.addEventListener('submit', (e) => {
     createOutputHtml(lb, gr, oz);
 });
 
+scriptEl.addEventListener('click', () => {
+    const resp = fetch('../../Task 1/js/script.js')
+        .then((response) => response.text())
+        .then((text) => {
+            console.log(text);
+        });
+});
+
 styleEl.addEventListener('click', () => {
-    alert('ok');
+    const resp = fetch('../../Task 1/style.css')
+        .then((response) => response.text())
+        .then((text) => {
+            console.log(text);
+        });
 });
 
 // Funkcijos
