@@ -26,7 +26,7 @@ function filterDogOwers(arr) {
     return arr.filter((el) => el.hasDog === true);
 }
 const rez1 = filterDogOwers(users);
-console.log('Turi suni === ', rez1);
+console.log('Turi suni (filter) ', rez1);
 
 function filterDogOwers1(arr) {
     let newArr = [];
@@ -37,7 +37,7 @@ function filterDogOwers1(arr) {
     return newArr;
 }
 const rez11 = filterDogOwers1(users);
-console.log('Turi suni 2 === ', rez11);
+console.log('Turi suni (forEach) ', rez11);
 
 // ======================
 
@@ -46,7 +46,7 @@ function filterAdults(arr) {
     //return users.filter((el) => el.age >= 18).map((obj) => obj.name);
 }
 const rez2 = filterAdults(users);
-console.log('Pilnametis === ', rez2);
+console.log('Pilnametis (filter) ', rez2);
 
 function filterAdults1(arr) {
     let newArr = [];
@@ -57,4 +57,4 @@ function filterAdults1(arr) {
     return newArr;
 }
 const rez22 = filterAdults1(users);
-console.log('Pilnametis 2 === ', rez22);
+console.log('Pilnametis (forEach) ', rez22);
