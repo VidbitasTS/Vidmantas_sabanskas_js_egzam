@@ -40,22 +40,22 @@ formEl.addEventListener('submit', (e) => {
 });
 
 scriptEl.addEventListener('click', () => {
-    const resp = fetch('../../Task 1/js/script.js')
-        .then((response) => response.text())
-        .then((text) => {
-            console.log(text);
-        });
+    openTextFile('../../Task 1/js/script.js');
 });
 
 styleEl.addEventListener('click', () => {
-    const resp = fetch('../../Task 1/style.css')
+    openTextFile('../../Task 1/style.css');
+});
+
+// Funkcijos
+
+function openTextFile(url) {
+    const resp = fetch(url)
         .then((response) => response.text())
         .then((text) => {
             console.log(text);
         });
-});
-
-// Funkcijos
+}
 
 function createOutputHtml(lb, gr, oz) {
     outEl.innerHTML = `<p><span>Svarai:</span> ${lb}</p><p><span>Gramai:</span> ${gr}</p><p><span>Uncijos:</span> ${oz}</p>`;

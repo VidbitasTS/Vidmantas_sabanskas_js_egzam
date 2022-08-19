@@ -49,6 +49,11 @@ a {
     text-decoration: none;
 }
 
+.item {
+    display: flex;
+    gap: 1rem;
+}
+
 .main-nav__link {
     display: inline-block;
     padding: 0.8em 1.6em;

@@ -31,3 +31,5 @@ class Movie {
 
 const rez = new Movie('pavadinimas', 'direktorius', 100000001);
 console.log('budget 100000001 === ', rez.wasExpensive());
+const rez2 = new Movie('pavadinimas', 'direktorius', 1);
+console.log('budget 1 === ', rez2.wasExpensive());

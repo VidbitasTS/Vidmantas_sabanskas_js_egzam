@@ -39,7 +39,7 @@ async function getElementEndpoint(url) {
                 `fetch fail klaidos: ${resp.status} ${resp.statusText} trying to fetch ${resp.url}`
             );
         }
-        const dataBack = await resp.json();
+        const dataBack = resp.json();
         return dataBack;
     } catch (error) {
         console.warn('klaida send comment ', error.message);

@@ -66,6 +66,8 @@
 /* Uzduoties styles */
 
 .card {
+    max-width: 500px;
+    max-width: 200px;
     padding: 1rem;
     box-shadow: 5px 5px 10px rgb(180, 190, 194);
     border: 1px solid rgb(191, 180, 180);
@@ -151,7 +153,8 @@ footer a {
     flex-wrap: wrap;
     gap: 1rem;
     row-gap: 1rem;
-    /* width: 100%; */
+    width: 100%;
+    justify-content: space-between;
 }
 
 .item {
@@ -169,6 +172,8 @@ footer a {
 }
 
 .item p {
+    max-width: 500px;
+    /* min-width: 200px; */
     background-color: rgb(194, 192, 192);
     padding: 10px;
     margin-bottom: 5px;
@@ -185,7 +190,8 @@ footer a {
 
 .img {
     /* max-width: 100%; */
-    width: auto;
+    max-width: 500px;
+    /* min-width: 200px; */
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
@@ -193,14 +199,24 @@ footer a {
 
 @media only screen and (max-width: 929px) {
     .tem {
-        flex: 1 160px;
+        /* flex: 1 160px; */
         /* flex-shrink: 2; */
     }
     .item p {
         color: yellow;
-        width: 200px;
+        /* width: 200px; */
     }
     .img {
-        width: 200px;
+        /* width: 200px; */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .headline {
+        font-size: 3.5em;
+    }
+    #search,
+    #submit-btn {
+        font-size: 2em;
     }
 }
