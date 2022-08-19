@@ -6,4 +6,4 @@ export default async function initHeader() {
     document.querySelector('header').insertAdjacentHTML('afterbegin', htmlHeader);
 }
 
-await initHeader();
+initHeader();

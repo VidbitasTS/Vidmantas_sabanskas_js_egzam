@@ -4,6 +4,10 @@ Turimas "audi" objektas.
 Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
 ir grąžins visus jo "key" masyve.
 -------------------------------------------------------------------------- */
+
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 const audi = {
     make: 'audi',
     model: 'A6',

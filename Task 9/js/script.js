@@ -9,6 +9,10 @@ budget: number
 Metodas: 
 wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
 ------------------------------------------------------------------------------------------------------ */
+
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 class Movie {
     constructor(title, director, budget) {
         this.title = title;

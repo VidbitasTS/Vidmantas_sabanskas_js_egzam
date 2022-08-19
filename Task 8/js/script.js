@@ -6,6 +6,9 @@ multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 function Calculator(a, b) {
     this.a = a;
     this.b = b;

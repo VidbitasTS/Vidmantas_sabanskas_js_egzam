@@ -8,6 +8,9 @@ atveju grąžins visų "users" amžiaus visurkį kaip skaičių.
 atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
 -------------------------------------------------------------------------- */
 
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
+
 const users = [
     { id: '1', name: 'John Smith', age: 20 },
     { id: '2', name: 'Ann Smith', age: 24 },

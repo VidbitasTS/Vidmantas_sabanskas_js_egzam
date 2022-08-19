@@ -17,7 +17,8 @@ const formEl = document.forms[0];
 const outEl = document.querySelector('#output');
 const kgEl = document.querySelector('#search');
 const alertEl = document.querySelector('#alert');
-
+const styleEl = document.querySelector('#style');
+console.log(styleEl);
 // addEventListner
 
 formEl.addEventListener('submit', (e) => {
@@ -33,6 +34,10 @@ formEl.addEventListener('submit', (e) => {
     const gr = val / 0.001;
     const oz = val * 35.274;
     createOutputHtml(lb, gr, oz);
+});
+
+styleEl.addEventListener('click', () => {
+    alert('ok');
 });
 
 // Funkcijos

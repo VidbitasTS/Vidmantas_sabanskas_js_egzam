@@ -7,6 +7,8 @@ atveju grąžins "users", kurie turi augintinį.
 2. funkcija "filterAdults" - kaip argumentą priims masyvą ir duoto masyvo 
 atveju grąžins masyvą su "users", kurie yra pilnamečiai.
 -------------------------------------------------------------------------- */
+import initHeader from './modules/header.js';
+import initFooter from './modules/footer.js';
 
 const users = [
     { id: '1', name: 'John Smith', age: 20, hasDog: true },
