@@ -11,7 +11,6 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 
 import initHeader from '../../modules/header.js';
 import initFooter from '../../modules/footer.js';
-import listenerMod from '../../modules/listener.js';
 
 // Taikomes
 const formEl = document.forms[0];

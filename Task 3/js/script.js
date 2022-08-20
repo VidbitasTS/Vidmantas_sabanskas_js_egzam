@@ -51,7 +51,9 @@ function createHtml(arr) {
     arr.forEach((el, i) => {
         const itemEl = document.createElement('div');
         itemEl.className = 'item card';
-        itemEl.innerHTML += `<p> ${i + 1}. <span>User:</span> ${
+        itemEl.innerHTML += `<p> ${
+      i + 1
+    }. <a href="#"><span><i class="fa fa-user" aria-hidden="true"></i></span></a> ${
       el.login
     }</p><img class="img" src="${el.avatar_url}"></img>`;
         console.log(itemEl);

@@ -51,7 +51,7 @@ function createHtml(arr) {
 
         const itemEl = document.createElement('div');
         itemEl.className = 'item card';
-        itemEl.innerHTML += `<p><span>Brand:</span> ${el.brand}</p><div>${modelsStr}</div>`;
+        itemEl.innerHTML += `<p><span><i class="fa fa-car" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div>`;
         console.log(itemEl);
         outputEl.append(itemEl);
     });
