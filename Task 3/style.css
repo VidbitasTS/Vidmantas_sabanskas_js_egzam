@@ -192,31 +192,28 @@ footer a {
     /* max-width: 100%; */
     max-width: 500px;
     /* min-width: 200px; */
-    height: 300px;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
 }
 
-@media only screen and (max-width: 929px) {
-    .tem {
-        /* flex: 1 160px; */
-        /* flex-shrink: 2; */
-    }
+@media screen and (max-width: 929px) {
     .item p {
         color: yellow;
         /* width: 200px; */
     }
-    .img {
-        /* width: 200px; */
-    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .headline {
         font-size: 3.5em;
     }
     #search,
     #submit-btn {
         font-size: 2em;
+    }
+    .item p {
+        color: green;
+        /* width: 200px; */
     }
 }
