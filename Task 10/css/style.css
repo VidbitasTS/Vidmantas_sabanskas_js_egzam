@@ -1,0 +1,8 @@
+@import '../../css/commonstyle.css';
+.wrapper {
+    min-height: 82vh;
+    /* min-width: calc(100vw - (100vw - 100%)); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

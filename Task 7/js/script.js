@@ -5,8 +5,8 @@ Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą
 ir grąžins visus jo "key" masyve.
 -------------------------------------------------------------------------- */
 
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
 
 const audi = {
     make: 'audi',
@@ -24,6 +24,6 @@ function key(obj) {
 }
 
 const rezArr = key(audi);
-console.log(rezArr);
+console.log('su For in ', rezArr);
 
-console.log(Object.keys(audi));
+console.log('su Object.key', Object.keys(audi));

@@ -9,12 +9,9 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
-//import initHeader from './modules/header.js';
-//import initFooter from './modules/footer.js';
 import initHeader from '../../modules/header.js';
 import initFooter from '../../modules/footer.js';
-
-//import initFooter1 from '../../Task 1/style.css';
+import listenerMod from '../../modules/listener.js';
 
 // Taikomes
 const formEl = document.forms[0];
@@ -23,7 +20,7 @@ const kgEl = document.querySelector('#search');
 const alertEl = document.querySelector('#alert');
 const scriptEl = document.querySelector('#script');
 const styleEl = document.querySelector('#style');
-console.log(scriptEl);
+
 // addEventListner
 
 formEl.addEventListener('submit', (e) => {
@@ -40,24 +37,6 @@ formEl.addEventListener('submit', (e) => {
     const oz = val * 35.274;
     createOutputHtml(lb, gr, oz);
 });
-
-scriptEl.addEventListener('click', () => {
-    openTextFile('../../Task 1/js/script.js');
-});
-
-styleEl.addEventListener('click', () => {
-    openTextFile('../../Task 1/style.css');
-});
-
-// Funkcijos
-
-function openTextFile(url) {
-    const resp = fetch(url)
-        .then((response) => response.text())
-        .then((text) => {
-            console.log(text);
-        });
-}
 
 function createOutputHtml(lb, gr, oz) {
     outEl.innerHTML = `<p><span>Svarai:</span> ${lb}</p><p><span>Gramai:</span> ${gr}</p><p><span>Uncijos:</span> ${oz}</p>`;

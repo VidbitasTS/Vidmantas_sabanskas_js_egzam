@@ -4,8 +4,8 @@ su tekstu "CLICK ME". Paspaudimų rezultatas turi būti matomas dešinėje
 pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 ------------------------------------------------------------------- */
 
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
 
 // Nusitaikom
 

@@ -10,8 +10,8 @@ Metodas:
 wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
 ------------------------------------------------------------------------------------------------------ */
 
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
 
 class Movie {
     constructor(title, director, budget) {
@@ -30,6 +30,6 @@ class Movie {
 }
 
 const rez = new Movie('pavadinimas', 'direktorius', 100000001);
-console.log('budget 100000001 === ', rez.wasExpensive());
+console.log('budget 100000001 === (true) ', rez.wasExpensive());
 const rez2 = new Movie('pavadinimas', 'direktorius', 1);
-console.log('budget 1 === ', rez2.wasExpensive());
+console.log('budget 1 === (false) ', rez2.wasExpensive());

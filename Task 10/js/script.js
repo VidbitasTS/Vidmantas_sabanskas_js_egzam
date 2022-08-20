@@ -2,8 +2,8 @@
 Sutvarkykite užduoties "Task 10" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
 
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
 
 import compositionDefault from '../modules/math/composition.js';
 import { division as divisionNewName } from '../modules/math/division.js';

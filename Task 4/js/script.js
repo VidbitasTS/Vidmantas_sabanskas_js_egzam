@@ -9,9 +9,10 @@ Pastaba: Sukurta kortelė, kurioje yra informacija apie automobilį (brand), tur
 turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
+
 const ENDPOINT = 'cars.json';
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
 
 // Taikomes
 

@@ -8,8 +8,8 @@ atveju grąžins visų "users" amžiaus visurkį kaip skaičių.
 atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
 -------------------------------------------------------------------------- */
 
-import initHeader from './modules/header.js';
-import initFooter from './modules/footer.js';
+import initHeader from '../../modules/header.js';
+import initFooter from '../../modules/footer.js';
 
 const users = [
     { id: '1', name: 'John Smith', age: 20 },
@@ -28,7 +28,7 @@ const users = [
 let avrAge = users.reduce(function(acc, curVal) {
     return acc + curVal.age / users.length;
 }, 0);
-console.log('avrAge ===', avrAge.toFixed(2));
+console.log('avrAge (reduce)', avrAge.toFixed(2));
 
 function getUserAverageAge(arr) {
     let avr = 0;
@@ -38,12 +38,12 @@ function getUserAverageAge(arr) {
     return avr.toFixed(2);
 }
 const average = getUserAverageAge(users);
-console.log('average age === ', average);
+console.log('average (for in) ', average);
 
 // ====================
 
 const arrNames = users.map((obj) => obj.name);
-console.log('arrNames === ', arrNames);
+console.log('arrNames (map)', arrNames);
 
 function getUsersNames(arr) {
     let newArr = [];
@@ -54,4 +54,4 @@ function getUsersNames(arr) {
 }
 
 const newArrNames = getUsersNames(users);
-console.log('newArrNames === ', newArrNames);
+console.log('newArrNames (for in) ', newArrNames);
