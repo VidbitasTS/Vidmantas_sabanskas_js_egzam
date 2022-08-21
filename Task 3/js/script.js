@@ -53,9 +53,10 @@ function createHtml(arr) {
         itemEl.className = 'item card';
         itemEl.innerHTML += `<p> ${
       i + 1
-    }. <a href="#"><span><i class="fa fa-user" aria-hidden="true"></i></span></a> ${
+    }. <a href="#"><span><i class="fa fa-user" aria-hidden="true"></i></span></a>
+    </p><img class="img" src="${el.avatar_url}"></img><div id="login"><p>${
       el.login
-    }</p><img class="img" src="${el.avatar_url}"></img>`;
+    }</p></div>`;
         console.log(itemEl);
         outputEl.append(itemEl);
     });

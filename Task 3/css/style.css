@@ -78,16 +78,15 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.item p {
+.item p:nth-child(1) {
     max-width: 500px;
     background-color: rgb(194, 192, 192);
     padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 15px;
     color: red;
+    text-align: center;
 }
 
 .item span {
@@ -98,27 +97,37 @@
 .img {
     max-width: 500px;
     object-fit: cover;
-    border-radius: 15px;
+}
+
+#login {
+    text-align: center;
+}
+
+#login p {
+    color: snow;
 }
 
 .fa-user:hover {
     color: red;
 }
 
+
+/* Responsive */
+
 @media screen and (max-width: 1024px) {
-    .fa-car {
+    .fa-user {
         color: green;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .fa-car {
+    .fa-user {
         color: blue;
     }
 }
 
 @media screen and (max-width: 640px) {
-    .fa-car {
+    .fa-user {
         color: yellow;
     }
 }
