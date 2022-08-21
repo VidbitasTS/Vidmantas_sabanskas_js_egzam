@@ -11,11 +11,21 @@ export default async function initHeader() {
     const path = str.slice(0, str.indexOf('Index'));
     createH1(path, str);
 
-    document.querySelector('#script').addEventListener('click', () => {
-        openTextFile(path + 'js/script.js');
-    });
-    document.querySelector('#style').addEventListener('click', () => {
-        openTextFile(path + 'css/style.css');
+    // document.querySelector('#script').addEventListener('click', () => {
+    //     openTextFile(path + 'js/script.js');
+    // });
+    // document.querySelector('#style').addEventListener('click', () => {
+    //     openTextFile(path + 'css/style.css');
+    // });
+
+    // const clickScriptEl = document.querySelectorAll('#nav-script');
+    // console.log(clickScriptEl[0].children[0].dataset.filename);
+    // clickScriptEl.addEventListener('click', (e) => {
+    //     alert(e.target);
+    // });
+
+    document.querySelector('#nav-script').addEventListener('click', (e) => {
+        openTextFile(path + e.target.dataset.filename);
     });
 }
 await initHeader();
