@@ -28,6 +28,8 @@ export default async function initHeader() {
         openTextFile(path + e.target.dataset.filename);
     });
 }
+
+// Eiga
 await initHeader();
 
 function openTextFile(url) {
@@ -35,15 +37,37 @@ function openTextFile(url) {
         .then((response) => response.text())
         .then((text) => {
             console.log(text);
+            openModal(text);
         });
 }
 
 function createH1(path, str) {
     if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
+    createModalWindow();
     const taskNumber = path.slice(str.indexOf('%20') + 3, -1);
     const wrapEl = document.querySelector('.wrapper');
     const divh1El = document.createElement('div');
     divh1El.className = 'divh1';
     divh1El.innerHTML = `<h1>TASK ${taskNumber}</h1>`;
     wrapEl.appendChild(divh1El);
+}
+
+function createModalWindow() {
+    // Modal window
+    const destEl = document.querySelector('body');
+    const createModalEl = document.createElement('div');
+    createModalEl.className = 'modal';
+    createModalEl.id = 'myModal';
+    createModalEl.innerHTML = `<span class="close">&times;</span><div class="modal-content"></div>`;
+    destEl.appendChild(createModalEl);
+}
+
+function openModal(content) {
+    //alert(content);
+    const modal = document.getElementById('myModal');
+    const modalContent = document.querySelector('.modal-content');
+    const closeSpan = document.getElementsByClassName('close')[0];
+    closeSpan.addEventListener('click', () => (modal.style.display = 'none'));
+    modal.style.display = 'block';
+    modalContent.textContent = content;
 }

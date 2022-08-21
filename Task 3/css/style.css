@@ -97,6 +97,14 @@
 .img {
     max-width: 500px;
     object-fit: cover;
+    opacity: 0.85;
+    transition: transform 1s;
+}
+
+.img:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    border-radius: 15pc;
 }
 
 #login {
