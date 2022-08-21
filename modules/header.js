@@ -33,8 +33,8 @@ export default async function initHeader() {
 await initHeader();
 
 function openTextFile(url) {
-    const resp = fetch(url)
-        .then((response) => response.text())
+    fetch(url)
+        .then((resp) => resp.text())
         .then((text) => {
             console.log(text);
             openModal(text);
@@ -42,8 +42,8 @@ function openTextFile(url) {
 }
 
 function createH1(path, str) {
-    if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
     createModalWindow();
+    if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
     const taskNumber = path.slice(str.indexOf('%20') + 3, -1);
     const wrapEl = document.querySelector('.wrapper');
     const divh1El = document.createElement('div');
@@ -58,14 +58,19 @@ function createModalWindow() {
     const createModalEl = document.createElement('div');
     createModalEl.className = 'modal';
     createModalEl.id = 'myModal';
-    createModalEl.innerHTML = `<span class="close">&times;</span><div class="modal-content"></div>`;
-    destEl.appendChild(createModalEl);
+    createModalEl.innerHTML = `<span class="close">&times;</span><div class="modal-content"><textarea rows=20></textarea></div>`;
+    // destEl.appendChild(createModalEl);
+    document
+        .querySelector('footer')
+        .insertAdjacentElement('afterend', createModalEl);
 }
 
 function openModal(content) {
-    //alert(content);
+    // alert(window.location.pathname);
+    // alert(window.location);
+    // alert(content);
     const modal = document.getElementById('myModal');
-    const modalContent = document.querySelector('.modal-content');
+    const modalContent = document.querySelector('.modal-content textarea');
     const closeSpan = document.getElementsByClassName('close')[0];
     closeSpan.addEventListener('click', () => (modal.style.display = 'none'));
     modal.style.display = 'block';

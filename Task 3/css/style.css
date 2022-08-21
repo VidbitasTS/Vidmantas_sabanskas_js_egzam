@@ -98,7 +98,7 @@
     max-width: 500px;
     object-fit: cover;
     opacity: 0.85;
-    transition: transform 1s;
+    transition: transform 0.75s;
 }
 
 .img:hover {
@@ -115,27 +115,38 @@
     color: snow;
 }
 
-.fa-user:hover {
+.icon {
     color: red;
+    font-size: 24px;
+}
+
+.icon:hover {
+    transform: scale(1.5);
 }
 
 
 /* Responsive */
 
-@media screen and (max-width: 1024px) {
-    .fa-user {
-        color: green;
+@media screen and (min-width: 640px) {
+    .icon {
+        color: yellow;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .fa-user {
+@media screen and (min-width: 768px) {
+    .icon {
         color: blue;
     }
 }
 
-@media screen and (max-width: 640px) {
-    .fa-user {
-        color: yellow;
+@media screen and (min-width: 1024px) {
+    .icon {
+        color: green;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .icon {
+        color: white;
     }
 }

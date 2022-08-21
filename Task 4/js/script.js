@@ -4,7 +4,6 @@ ir iš atvaizduos visus automobilių gamintojus ir pagamintus modelius.
 Kiekvienas gamintojas turės savo atvaizdavimo "kortelę", kurioje bus 
 nurodomas gamintojas ir jo pagaminti modeliai.
 
-
 Pastaba: Sukurta kortelė, kurioje yra informacija apie automobilį (brand), turi 
 turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
@@ -46,15 +45,16 @@ async function getElementEndpoint(url) {
 function createHtml(arr) {
     arr.forEach((el) => {
         let modelsStr = '';
-        el.models.forEach((model) => (modelsStr += `<p>${model}</p>`));
+        el.models.forEach(
+            (model, i) =>
+            (modelsStr += `<p class="${
+          i % 2 === 0 ? 'srollElcolor0' : 'srollElcolor2'
+        }">${model}</p>`)
+        );
 
         const itemEl = document.createElement('div');
         itemEl.className = 'item card';
-        itemEl.innerHTML += `<p><span><i class="fa fa-car" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div>`;
-        // itemEl.className = 'item-main card';
-        // itemEl.innerHTML +=
-        //     '<div class="class-header"><div class="item-header">Brand:</div><div>Models:</div></div>';
-        // itemEl.innerHTML += `<div class="item"><p><span><i class="fa fa-car" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div></div>`;
+        itemEl.innerHTML += `<p><span><i class="fa fa-car icon" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div>`;
         outputEl.append(itemEl);
     });
 }
