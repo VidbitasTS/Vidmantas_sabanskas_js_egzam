@@ -22,7 +22,6 @@ const outputEl = document.querySelector('#output');
 
 const rezArr = await getElementEndpoint(ENDPOINT);
 createHtml(rezArr);
-console.log(rezArr);
 
 // addEventListener
 
@@ -52,7 +51,10 @@ function createHtml(arr) {
         const itemEl = document.createElement('div');
         itemEl.className = 'item card';
         itemEl.innerHTML += `<p><span><i class="fa fa-car" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div>`;
-        console.log(itemEl);
+        // itemEl.className = 'item-main card';
+        // itemEl.innerHTML +=
+        //     '<div class="class-header"><div class="item-header">Brand:</div><div>Models:</div></div>';
+        // itemEl.innerHTML += `<div class="item"><p><span><i class="fa fa-car" aria-hidden="true"></i></span></p><p class="brand">${el.brand}</p><div class="border"></div><div class="scroll">${modelsStr}</div></div>`;
         outputEl.append(itemEl);
     });
 }

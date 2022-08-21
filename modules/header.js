@@ -1,3 +1,5 @@
+// Funkcijos
+
 export default async function initHeader() {
     // ideti i body pradzia
     const resp = await fetch('../layout/header.html');
@@ -6,13 +8,14 @@ export default async function initHeader() {
     document.querySelector('header').insertAdjacentHTML('afterbegin', htmlHeader);
 
     const str = window.location.toString();
+    const path = str.slice(0, str.indexOf('Index'));
+    createH1(path, str);
+
     document.querySelector('#script').addEventListener('click', () => {
-        const path = str.slice(0, str.indexOf('Index')) + 'js/script.js';
-        openTextFile(path);
+        openTextFile(path + 'js/script.js');
     });
     document.querySelector('#style').addEventListener('click', () => {
-        const path = str.slice(0, str.indexOf('Index')) + 'css/style.css';
-        openTextFile(path);
+        openTextFile(path + 'css/style.css');
     });
 }
 await initHeader();
@@ -23,4 +26,14 @@ function openTextFile(url) {
         .then((text) => {
             console.log(text);
         });
+}
+
+function createH1(path, str) {
+    if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
+    const taskNumber = path.slice(str.indexOf('%20') + 3, -1);
+    const wrapEl = document.querySelector('.wrapper');
+    const divh1El = document.createElement('div');
+    divh1El.className = 'divh1';
+    divh1El.innerHTML = `<h1>TASK ${taskNumber}</h1>`;
+    wrapEl.appendChild(divh1El);
 }

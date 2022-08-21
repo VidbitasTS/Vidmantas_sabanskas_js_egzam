@@ -33,7 +33,7 @@ function filterDogOwers1(arr) {
     let newArr = [];
     arr.forEach((el) => {
         if (el.hasDog === true) newArr.push(el);
-        //       if (el.hasDog === true) newArr.push({ name: el.name, hasDog: el.hasDog });
+        // if (el.hasDog === true) newArr.push({ name: el.name, hasDog: el.hasDog });
     });
     return newArr;
 }
@@ -53,7 +53,7 @@ function filterAdults1(arr) {
     let newArr = [];
     arr.forEach((el) => {
         if (el.age >= 18) newArr.push(el);
-        //        if (el.age >= 18) newArr.push({ users: el.name });
+        // if (el.age >= 18) newArr.push({ users: el.name });
     });
     return newArr;
 }

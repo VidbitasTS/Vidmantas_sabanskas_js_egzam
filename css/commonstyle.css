@@ -12,6 +12,18 @@
     min-width: calc(100vw - (100vw - 100%));
 }
 
+.divh1 {
+    text-align: center;
+}
+
+.divh1 h1 {
+    padding: 20px 0;
+    margin: 10px 0;
+    background-color: rgb(202, 199, 199);
+    width: 100%;
+    color: white;
+}
+
 header {
     background-color: rgb(202, 199, 199);
 }

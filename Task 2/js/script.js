@@ -14,6 +14,8 @@ const btnEl = document.querySelector('#btn__element');
 
 let state = 1;
 
+//  addEventListener
+
 btnEl.addEventListener('click', () => {
     stateEl.textContent = state++;
 });

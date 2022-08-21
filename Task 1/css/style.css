@@ -3,8 +3,6 @@
 /* Mobile first */
 
 .wrapper {
-    min-height: 82vh;
-    /*  min-width: calc(100vw - (100vw - 100%)); */
     background-color: #fec631;
 }
 
@@ -95,68 +93,4 @@ form {
 #alert {
     margin-top: 20px;
     color: red;
-}
-
-.card {
-    padding: 1rem;
-    box-shadow: 5px 5px 10px rgb(180, 190, 194);
-    border: 1px solid rgb(191, 180, 180);
-    border-radius: 5px;
-    background-color: snow;
-}
-
-header {
-    background-color: rgb(202, 199, 199);
-}
-
-a {
-    text-decoration: none;
-}
-
-.main-nav__link {
-    display: inline-block;
-    padding: 0.8em 1.6em;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    line-height: normal;
-}
-
-.main-nav__link:hover {
-    background-color: rgb(216, 216, 216);
-    color: #2250fc;
-}
-
-.flex {
-    display: flex;
-    gap: 1rem;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.justify-content {
-    justify-content: end;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.max-w-300 {
-    max-width: 300px;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
 }

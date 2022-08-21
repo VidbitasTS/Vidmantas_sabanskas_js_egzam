@@ -3,7 +3,6 @@
 /* Mobile first */
 
 .wrapper {
-    min-width: calc(100vw - (100vw - 100%));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,12 +44,21 @@
     justify-content: space-between;
 }
 
+.class-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-bottom: 2px;
+    background: rgb(227, 226, 226);
+}
+
 .item {
     background-color: rgb(227, 226, 226);
     height: 200px;
     width: 300px;
     flex: 1;
     display: flex;
+    flex-direction: row;
     gap: 0.25rem;
     flex: 1;
 }
@@ -66,15 +74,18 @@
 
 .fa-car {
     color: gray;
+    font-size: 24px;
 }
 
 .brand {
     text-decoration: underline wavy green 1px;
+    letter-spacing: 2px;
     transform: rotate(-50grad);
     margin-top: 60px;
     margin-left: 30px;
     font-weight: 900;
     color: cadetblue;
+    font-size: 1.5rem;
 }
 
 .border {
