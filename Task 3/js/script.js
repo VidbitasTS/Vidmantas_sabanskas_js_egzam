@@ -53,11 +53,31 @@ function createHtml(arr) {
         itemEl.className = 'item card';
         itemEl.innerHTML += `<p>${
       i + 1
-    }. <a href="#"><span><i class="fa fa-info-circle icon" aria-hidden="true"></i></span></a>
-    </p><img class="img" src="${el.avatar_url}"></img><div id="login"><p>${
+    }. <a href="#"><span><i class="fa fa-info-circle icon" aria-hidden="true" data-cardNumber =${
+      i + 1
+    }></i></span></a>
+    </p><img id="icon-${i + 1}" class="img" src="${
+      el.avatar_url
+    }"></img><div class="hide info-text-${i + 1}"><p>Papildoma info ${
       el.login
-    }</p></div>`;
-        // console.log(itemEl);
+    }</p></div><div id="login"><p>${el.login}</p></div>`;
+
         outputEl.append(itemEl);
     });
+
+    const iconsEventArr = document.querySelectorAll('.icon');
+    console.log('iconsEvent ===', iconsEventArr);
+    iconsEventArr.forEach((tag) => tag.addEventListener('click', clickIcon));
+}
+
+function clickIcon(e) {
+    console.log(e.target.dataset.cardnumber);
+    const iconEl = document.querySelector(`#icon-${e.target.dataset.cardnumber}`);
+    const infoEl = document.querySelector(
+        `.info-text-${e.target.dataset.cardnumber}`
+    );
+    const display = window.getComputedStyle(iconEl).display;
+    console.log(display);
+    iconEl.style.display = display === 'block' ? 'none' : 'block';
+    infoEl.style.display = display === 'block' ? 'block' : 'none';
 }

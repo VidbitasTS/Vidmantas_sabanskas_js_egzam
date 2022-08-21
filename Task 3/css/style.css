@@ -55,6 +55,10 @@
 
 /* Uzduoties styles */
 
+.hide {
+    display: none;
+}
+
 .card {
     max-width: 200px;
     padding: 1rem;
@@ -122,6 +126,12 @@
 
 .icon:hover {
     transform: scale(1.5);
+}
+
+.info-text {
+    height: 100%;
+    width: 200px;
+    text-align: center;
 }
 
 

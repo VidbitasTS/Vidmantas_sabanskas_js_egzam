@@ -59,16 +59,12 @@ function createModalWindow() {
     createModalEl.className = 'modal';
     createModalEl.id = 'myModal';
     createModalEl.innerHTML = `<span class="close">&times;</span><div class="modal-content"><textarea rows=20></textarea></div>`;
-    // destEl.appendChild(createModalEl);
     document
         .querySelector('footer')
         .insertAdjacentElement('afterend', createModalEl);
 }
 
 function openModal(content) {
-    // alert(window.location.pathname);
-    // alert(window.location);
-    // alert(content);
     const modal = document.getElementById('myModal');
     const modalContent = document.querySelector('.modal-content textarea');
     const closeSpan = document.getElementsByClassName('close')[0];
