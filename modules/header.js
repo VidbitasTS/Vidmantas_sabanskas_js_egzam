@@ -7,9 +7,11 @@ export default async function initHeader() {
     // ideti i body pabaiga
     document.querySelector('header').insertAdjacentHTML('afterbegin', htmlHeader);
 
-    const str = window.location.toString();
-    const path = str.slice(0, str.indexOf('Index'));
-    createH1(path, str);
+    // const str = document.location.toString();
+    // const path = str.slice(0, str.indexOf('index'));
+    // alert(path);
+    // createH1(path, str);
+    createH1(window.location.toString().toUpperCase());
 
     // document.querySelector('#script').addEventListener('click', () => {
     //     openTextFile(path + 'js/script.js');
@@ -41,15 +43,33 @@ function openTextFile(url) {
         });
 }
 
-function createH1(path, str) {
+// function createH1(path, str) {
+function createH1(path) {
     createModalWindow();
-    if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
-    const taskNumber = path.slice(str.indexOf('%20') + 3, -1);
+
+    const nrStart = path.indexOf('%20');
+    const nrEnd = path.indexOf('INDEX');
+
+    const rez = +path.substring(nrStart + 3, nrEnd - 1);
+    if (rez < 5) return;
     const wrapEl = document.querySelector('.wrapper');
     const divh1El = document.createElement('div');
     divh1El.className = 'divh1';
-    divh1El.innerHTML = `<h1>TASK ${taskNumber}</h1>`;
+    divh1El.innerHTML = `<h1>TASK ${rez}</h1>`;
     wrapEl.appendChild(divh1El);
+
+    // console.log(nrStart, nrEnd, rez);
+
+    // return;
+    // if (path.slice(str.indexOf('%20') + 3, -1).length > 1) alert('daugiau');
+    // alert(path.slice(str.indexOf('%20') + 3, -1));
+    // if (path.slice(str.indexOf('%20') + 3, -1) < 5) return;
+    // const taskNumber = path.slice(str.indexOf('%20') + 3, -1);
+    // const wrapEl = document.querySelector('.wrapper');
+    // const divh1El = document.createElement('div');
+    // divh1El.className = 'divh1';
+    // divh1El.innerHTML = `<h1>TASK ${taskNumber}</h1>`;
+    // wrapEl.appendChild(divh1El);
 }
 
 function createModalWindow() {

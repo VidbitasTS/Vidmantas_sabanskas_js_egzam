@@ -53,7 +53,7 @@ function createHtml(arr) {
         itemEl.className = 'item card';
         itemEl.innerHTML += `<p>${
       i + 1
-    }. <a href="#"><span><i class="fa fa-info-circle icon" aria-hidden="true" data-cardNumber =${
+    }. <a href="#"><span><i class="fa fa-info-circle icon" aria-hidden="true" data-cardNumber=${
       i + 1
     }></i></span></a>
     </p><img id="icon-${i + 1}" class="img" src="${
@@ -66,18 +66,27 @@ function createHtml(arr) {
     });
 
     const iconsEventArr = document.querySelectorAll('.icon');
-    console.log('iconsEvent ===', iconsEventArr);
     iconsEventArr.forEach((tag) => tag.addEventListener('click', clickIcon));
 }
 
 function clickIcon(e) {
-    console.log(e.target.dataset.cardnumber);
+    console.log(e);
     const iconEl = document.querySelector(`#icon-${e.target.dataset.cardnumber}`);
     const infoEl = document.querySelector(
         `.info-text-${e.target.dataset.cardnumber}`
     );
+
+    const hidEl = document.querySelector(
+        `.info-text-${e.target.dataset.cardnumber}`
+    ).hidden;
+    console.log(hidEl);
+
     const display = window.getComputedStyle(iconEl).display;
-    console.log(display);
     iconEl.style.display = display === 'block' ? 'none' : 'block';
     infoEl.style.display = display === 'block' ? 'block' : 'none';
+    return false;
+}
+
+function callYourFunction() {
+    alert('kjk');
 }
