@@ -1,0 +1,162 @@
+@import '../../css/commonstyle.css';
+
+/* Mobile first */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-container #btn {
+    margin: 50px 0;
+    padding: 15px 25px;
+    background-color: #474747;
+    border: #222;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.btn-container #btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.output-cointainer {
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output-cointainer h1 {
+    color: #fff;
+}
+
+.output-cointainer #output {
+    width: 80%;
+    margin-top: 25px;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+/* Uzduoties styles */
+
+.hide {
+    display: none;
+}
+
+.card {
+    max-width: 200px;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgb(180, 190, 194);
+    border: 1px solid rgb(191, 180, 180);
+    border-radius: 5px;
+    background-color: snow;
+}
+
+#output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.item p:nth-child(1) {
+    max-width: 500px;
+    background-color: rgb(194, 192, 192);
+    padding: 10px;
+    color: red;
+    text-align: center;
+}
+
+.item span {
+    color: white;
+    padding: 0 5px;
+}
+
+.img {
+    max-width: 500px;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: transform 0.75s;
+}
+
+.img:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    border-radius: 15pc;
+}
+
+#login {
+    text-align: center;
+}
+
+#login p {
+    color: snow;
+}
+
+.icon {
+    color: red;
+    font-size: 24px;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+.info-text {
+    height: 100%;
+    width: 200px;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width: 640px) {
+    .icon {
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .icon {
+        color: blue;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .icon {
+        color: green;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .icon {
+        color: white;
+    }
+}

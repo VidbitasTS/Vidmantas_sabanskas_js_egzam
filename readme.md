@@ -1,0 +1,1 @@
+Paleisti vidmantas_sabanskas_js_egzam/index.html
